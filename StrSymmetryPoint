@@ -1,0 +1,15 @@
+#codility
+
+def solution(S):
+    l = len(S) ##
+
+    if l % 2 == 0: # 길이가 짝수인 경우는 무조건 -1
+        return -1
+
+    mid_point = l//2 # 중앙
+
+    for idx in range(0, mid_point): #0부터 중앙까지
+        if S[idx] !=  S[l - idx - 1]: #처음과 마지막 대응자리가 다르면 -1
+            return -1
+
+    return mid_point #나머지는 다 중앙값 (1자리 문자의 경우도 해결)
