@@ -1,0 +1,19 @@
+# Codility
+# 1. 각 숫자 갯수를 세는 딕셔너리 생성
+# 2. 숫자 갯수가 1인 첫번째 값 출력
+# 3. 나머지 경우는 -1
+ 
+def solution(A):
+    counts = {}
+
+    for x in A:
+        if x in counts:
+            counts[x] += 1
+        else:
+            counts[x] = 1
+
+    for x in A:
+        if counts[x] == 1:
+            return x
+
+    return -1 
