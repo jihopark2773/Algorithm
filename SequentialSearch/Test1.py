@@ -12,4 +12,5 @@ seqsearch(5, [1,2,3,4,5], 5)
 ## Test Case2
 S = [1, 11, 13, 14, 15]
 x = 14
-seqsearch(len(S)-1, S, x)
+a = seqsearch(len(S)-1, S, x)
+print ('location =', a)
